@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+description = "A Discord bot for World of Warcraft guild called Mirabelki (mirabellas)"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "majkusi" }]
+name = "mirabellas-bot"
+version = "0.1.0"
+requires-python = ">= 3.14"
+dependencies = ["discord.py>=2.7.1", "python-dotenv>=1.2.4"]
