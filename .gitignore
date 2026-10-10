@@ -1,0 +1,46 @@
+# Secrets: Discord token, LLM API keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local Claude Code context (private homelab notes, repo is public)
+CLAUDE.md
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Virtual environments
+.venv/
+venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Tooling caches (Ruff, pytest, mypy, coverage)
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Bot runtime data
+*.log
+logs/
+*.db
+*.sqlite
+*.sqlite3
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
