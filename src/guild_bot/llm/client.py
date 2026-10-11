@@ -11,8 +11,8 @@ class LlmClient():
         self.client = genai.Client(
             api_key=self.llm_api_key,
             http_options=types.HttpOptions(
-                timeout=30_000,                                       # 30 s per request, in ms
-                retry_options=types.HttpRetryOptions(attempts=2),     # 1 try + 1 retry
+                timeout=30_000,                                       
+                retry_options=types.HttpRetryOptions(attempts=2),     
             ),
         )
 
