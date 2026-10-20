@@ -6,14 +6,15 @@
 ![Last commit](https://img.shields.io/github/last-commit/majkusi/mirabellas_discord_bot)
 ![License](https://img.shields.io/github/license/majkusi/mirabellas_discord_bot)
 
-Discord bot for Mirabelki, a World of Warcraft guild. It translates Polish chat messages into Silesian and, soon, summarises long conversations.
+Discord bot for Mirabelki, a World of Warcraft guild. It translates Polish chat messages into Silesian and summarises long conversations.
 
 Built as an application to deploy on the [homelab](https://github.com/majkusi/homelab) Proxmox server, and to practise Python, containers and CI along the way.
 
 ## Features
 
 - **`!slunski <text>`** translates Polish into Silesian, spelled with the Polish alphabet the way the guild writes it in chat
-- **Planned:** `/tldr` to summarise recent channel history, slash commands instead of text commands
+- **`!tldr [count]`** summarises the last `count` messages in the channel (default 200, max 500), skipping bot messages
+- **Planned:** slash commands instead of text commands
 
 ## Stack
 
@@ -77,6 +78,7 @@ Then, in a channel the bot can see:
 
 ```
 !slunski Idziemy dziś na raid o 20, kto będzie?
+!tldr 100
 ```
 
 ## Roadmap
@@ -85,7 +87,7 @@ Planned work is tracked in the [homelab issues](https://github.com/majkusi/homel
 
 ## Privacy
 
-Messages passed to a command are sent to the Gemini API. On the free tier, Google may use them to improve its models (see the [Gemini API terms](https://ai.google.dev/gemini-api/terms)). Do not use the bot on content the guild would not want to share.
+Text passed to `!slunski` is sent to the Gemini API, and `!tldr` sends recent channel history, including authors' display names. On the free tier, Google may use them to improve its models (see the [Gemini API terms](https://ai.google.dev/gemini-api/terms)). Do not use the bot on content the guild would not want to share.
 
 ## Security
 
